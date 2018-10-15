@@ -1,0 +1,100 @@
+/*
+* @Author: Moltemort
+* @Date:   2018-10-15 18:40:48
+* @Last Modified by:   Moltemort
+* @Last Modified time: 2018-10-15 18:41:00
+*/
+
+/*css reset 把元素的默认样式统一*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #f6f6f6;
+    font: 12px/1.5 tahoma, arial, "Microsoft YaHei", sans-serif;
+}
+
+li {
+    list-style: none;
+}
+img {
+    display: block;
+    border: none;
+}
+label {
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    cursor: pointer;
+}
+
+
+
+/*定宽布局*/
+
+.w {
+    width: 1080px;
+    /*居中*/
+    margin: 0 auto;
+    /*定位绝对定位的元素*/
+    position: relative;
+    /*清除浮动*/
+    overflow: hidden; 
+}
+/*media查询有些不能兼容IE,所以用这种方式做屏幕适配*/
+.large .w {
+    width: 1600px;
+}
+
+
+
+
+/*全局通用样式*/
+
+/*隐藏类*/
+.hide {
+    display: none;
+}
+/*超链样式*/
+.link {
+    color: #999;
+    cursor: pointer;
+    text-decoration: none;
+}
+.link:hover {
+    color: #e80012;
+}
+/*类link文本样式*/
+.link-text {
+    color: #999;
+    text-decoration: none;
+}
+/*btn*/
+.btn {
+    display: inline-block;
+    /*IEinline-block不生效的代替方法：*/
+    padding: 0 20px;
+    height: 40px;
+    line-height: 40px;
+    /*height和line-height一起使用能让文字垂直居中*/
+    vertical-align: middle;
+    border: none;
+    background: #c60023;
+    font-size: 17px;
+    font-weight: bold;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+.btn-mini {
+    /*btn-mini元素在html文件中的class是btn和btn-mini,也就是继承了btn的样式*/
+    height: 25px;
+    line-height: 25px;
+    font-size: 12px;
+    padding: 0 10px;
+}

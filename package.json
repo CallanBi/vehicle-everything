@@ -1,0 +1,8 @@
+{
+    "scripts": {
+    "dev": "WEBPACK_ENV=dev webpack-dev-server --inline --port 8099",
+    "dev_win": "set WEBPACK_ENV=dev && webpack-dev-server --inline --port 8099",
+    "dist": "WEBPACK_ENV=online webpack -p",
+    "dist_win": "set WEBPACK_ENV=online webpack -p"
+    }
+}

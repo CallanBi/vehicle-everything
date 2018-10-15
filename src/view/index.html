@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Vehicle Everything</title>
+    <!-- 使用chrome和最新版ie渲染 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <!-- SEO页面关键词 -->
+    <meta name="keywords" content="vehicle everything" />
+    <!-- SEO页面描述 -->
+    <meta name="description" content="车辆检测跟踪网页端" />
+    <!-- 作者 -->
+    <meta name="author" content="Moltemort" />
+    <!-- 图标 -->
+    <!-- <link rel="shortcut icon" type="image/ico" href="/todo.ico" /> -->
+     <!-- 移动端 -->
+     <!--     <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" /> -->
+
+    <!-- 引入js-cdn,修改vue可引入其它库(cdn地址类式) -->
+    <!-- <script src="https://unpkg.com/vue"></script>
+ -->    <!-- 样式重置 -->
+   <!-- <link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/meyer-reset/2.0/reset.min.css"> -->
+</head>
+<body>
+    <!--HTML video element only supports video formats of Ogg(Theora), WebM(VP8/VP9) or MP4(H.264).-->
+    <input type="file" id="fileInput" name="file" /><br/>
+    <!--a <canvas> to transfer video to canvas ImageData frame-by-frame-->
+    <canvas id="canvasFrame"></canvas>
+    <div class="wrapper">
+        <div class="video-box">
+            <!--a <video> to display video-->
+            <video id="video-element" autoplay="autoplay"></video>
+            <!--another <canvas> to display the video OpenCV.js gets-->
+            <canvas id="canvasOutput" width=640 height=480></canvas>
+        </div>
+        <div class="video-tag">
+            <div class="tag">输入</div><div class="tag">输出</div>
+        </div>  
+    </div>
+</body>
+</html>

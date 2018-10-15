@@ -1,0 +1,43 @@
+/*
+* @Author: Moltemort
+* @Date:   2018-10-14 09:51:24
+* @Last Modified by:   Moltemort
+* @Last Modified time: 2018-10-15 19:41:49
+*/
+
+
+#canvasFrame {
+    display: none;
+}
+
+#fileInput {
+    display: block;
+    margin: 40px auto;
+}
+
+.video-box,
+.video-tag {
+    width: 1310px;
+    margin: 0 auto;
+}
+
+#video-element,
+#canvasOutput {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    object-fit:fill;
+    width: 640px;
+    height: 480px;
+    display: inline-block;
+    border: 2px solid #e80012;
+    margin: 5px;
+}
+
+.tag {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline-block;
+    width: 640px;
+    text-align: center;
+}
+
