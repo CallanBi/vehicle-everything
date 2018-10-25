@@ -2,7 +2,7 @@
 * @Author: Moltemort
 * @Date:   2018-10-14 09:51:32
 * @Last Modified by:   Moltemort
-* @Last Modified time: 2018-10-15 19:39:38
+* @Last Modified time: 2018-10-25 22:23:52
 */
 
 cv = require("opencv.js");
@@ -22,12 +22,44 @@ console.log("hello index.js");
      let src = new cv.Mat(videoElement.height, videoElement.width, cv.CV_8UC4);
      let dst = new cv.Mat(videoElement.height, videoElement.width, cv.CV_8UC1);
      let cap = new cv.VideoCapture(videoElement);
+     let fgbg = new cv.BackgroundSubtractorMOG2(500, 20, false);
+
      const FPS = 30;
-     function processVideo() {
+
+     function processVideo() {      
          let begin = Date.now();
          cap.read(src);
-         cv.cvtColor(src, dst, cv.COLOR_RGBA2GRAY);
+
+         // 高斯平滑处理
+         let ksize = new cv.Size(13, 13);
+         cv.GaussianBlur(src, dst, ksize, 2, 2, cv.BORDER_DEFAULT);
+         // cv.imshow("canvasOutput", dst);
+
+         // 灰度处理
+         cv.cvtColor(dst, dst, cv.COLOR_RGBA2GRAY);
+         // cv.imshow("canvasOutput", dst);
+         
+
+         // 背景差法处理
+         fgbg.apply(dst, dst, 0.2);
+         // cv.imshow("canvasOutput", dst);
+
+         // 二值化处理
+         cv.threshold(dst, dst, 30, 255, cv.THRESH_BINARY);
+         // cv.imshow("canvasOutput", dst);
+
+         // 膨胀处理
+         let Md = cv.Mat.ones(11, 30, cv.CV_8U);
+         let anchor = new cv.Point(-1, -1);
+         cv.dilate(dst, dst, Md, anchor, 1, cv.BORDER_CONSTANT, cv.morphologyDefaultBorderValue());
+         // cv.imshow("canvasOutput", dst);
+
+         // 腐蚀处理
+         let Me = cv.Mat.ones(11, 30, cv.CV_8U);
+         cv.erode(dst, dst, Me, anchor, 1, cv.BORDER_CONSTANT, cv.morphologyDefaultBorderValue());
+
          cv.imshow("canvasOutput", dst);
+
          // schedule next one.
          let delay = 1000/FPS - (Date.now() - begin);
          setTimeout(processVideo, delay);
