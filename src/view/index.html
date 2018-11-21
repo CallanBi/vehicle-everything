@@ -23,6 +23,13 @@
    <!-- <link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/meyer-reset/2.0/reset.min.css"> -->
 </head>
 <body>
+    <div class="choose-type-wrapper w">
+        <label for="context" class="choose-type">请选择应用场景</label>
+        <select id="context">
+            <option id="plice">电子警察</option>
+            <option id="high-spot">高点监控</option>
+        </select>
+    </div>
     <!--HTML video element only supports video formats of Ogg(Theora), WebM(VP8/VP9) or MP4(H.264).-->
     <input type="file" id="fileInput" name="file" /><br/>
     <!--a <canvas> to transfer video to canvas ImageData frame-by-frame-->
@@ -36,7 +43,16 @@
         </div>
         <div class="video-tag">
             <div class="tag">输入</div><div class="tag">输出</div>
-        </div>  
+        </div>
+
+        <div class="output-tags w">
+            <div class="output-tag vehicles-count">
+                车辆计数： <span id="count"></span>
+            </div>
+            <div class="output-tag vehicles-speed">
+                车流速度： <span id="speed"></span>
+            </div>    
+        </div>
     </div>
 </body>
 </html>

@@ -2,7 +2,7 @@
 * @Author: Moltemort
 * @Date:   2018-10-14 09:51:24
 * @Last Modified by:   Moltemort
-* @Last Modified time: 2018-10-15 19:41:49
+* @Last Modified time: 2018-11-21 17:09:07
 */
 
 
@@ -21,6 +21,31 @@
     margin: 0 auto;
 }
 
+.choose-type-wrapper {
+    
+}
+
+.choose-type {
+    display: block;
+    margin: 40px auto;
+    text-align: center;
+}
+
+#context {
+    display: block;
+    margin: 0 auto;
+    height: 35px;
+    line-height: 35px;
+    font-size: 16px;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+#context option {
+    
+}
+
 #video-element,
 #canvasOutput {
     -webkit-box-sizing: border-box;
@@ -29,7 +54,8 @@
     width: 640px;
     height: 480px;
     display: inline-block;
-    border: 2px solid #e80012;
+    border: 2px solid #ccc;
+    border-radius: 5px;
     margin: 5px;
 }
 
@@ -41,3 +67,15 @@
     text-align: center;
 }
 
+.output-tag {
+    display: block;
+    background: #ddd;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    margin-top: 5px;
+}
+
+.output-tag:nth-child(1) {
+    margin-top: 25px;
+}
