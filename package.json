@@ -1,8 +1,36 @@
 {
-    "scripts": {
+  "name": "vehicle-everything",
+  "version": "1.0.0",
+  "description": "vehicle-everything",
+  "main": "index.js",
+  "scripts": {
     "dev": "WEBPACK_ENV=dev webpack-dev-server --inline --port 8099",
     "dev_win": "set WEBPACK_ENV=dev && webpack-dev-server --inline --port 8099",
     "dist": "WEBPACK_ENV=online webpack -p",
     "dist_win": "set WEBPACK_ENV=online webpack -p"
-    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Moltemort/vehicle-everything.git"
+  },
+  "author": "Moltemort",
+  "license": "ISC",
+  "bugs": {},
+  "homepage": "https://github.com/Moltemort/vehicle-everything#readme",
+  "devDependencies": {
+    "css-loader": "^0.28.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.11.1",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "style-loader": "^0.23.0",
+    "url-loader": "^0.5.8",
+    "webpack": "^1.15.0",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^1.16.5"
+  },
+  "dependencies": {
+    "hogan.js": "^3.0.2",
+    "opencv.js": "^1.2.1"
+  }
 }
