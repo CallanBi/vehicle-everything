@@ -35,13 +35,13 @@
 
 - 通过webpack-dev-server使项目在本地服务器运行：
 
-  如果是Windows环境：
+Windows系统：
 
 ```
   npm run dev_win
 ```
 
-  	如果是Mac环境：
+Mac系统：
 
 ```
   npm run dev
@@ -64,4 +64,5 @@
     - 车辆计数的逻辑存在很严重的bug
     - 高点监控的参数没调优，导致高点监控的鲁棒性不高。两个场景用的是同一套opencv的参数。
     - 不能识别重叠的车辆
+- 最后：我要去考研了，这可能是今年最后一个commit（不过有可能还会刷刷LeetCode），前端和GitHub我们明年再见。
 
