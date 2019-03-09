@@ -16,36 +16,41 @@
 
 - git版本控制工具： [git官网](https://git-scm.com/)
 - node环境: [node.js中文官网](https://nodejs.org/zh-cn/)
-  - 经测试可以安装最新稳定版，如果出现问题请切换到@4.4.x版本
-- webpack打包工具：[webpack官网](https://www.webpackjs.com/)
+  - 经测试可以安装最新稳定版，如果出现问题请切换到@6.x.x版本或@4.x.x版本
 
 #### 项目部署
 
+- 进入项目根目录, 全局安装webpack@1.15.0:
+
+  ```
+  npm install webpack@1.15.0 -g
+  ```
+  
 - 安装所有项目所需的package，生成node_modules目录:
 
-```
+  ```
   npm install
-```
+  ```
 
 - 打包所有处于src中的源文件（源代码都储存在`./src`目录下）,生成`./dist`目录：
 
-```
+  ```
   webpack
-```
+  ```
 
 - 通过webpack-dev-server使项目在本地服务器运行：
 
-Windows系统：
+  Windows系统：
 
-```
+  ```
   npm run dev_win
-```
+  ```
 
-Mac系统：
+  Mac系统：
 
-```
-  npm run dev
-```
+  ```
+    npm run dev
+  ```
 
 - 在`http://localhost:8099/dist/view`中查看应用。可以上传本地任意的车辆视频文件来检测。
 
