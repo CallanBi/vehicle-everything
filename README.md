@@ -6,7 +6,7 @@
 
 ### 简介
 
-一个运行于网页端的车辆检测项目，技术栈为webpack+原生JavaScript+jQuery框架+opencv.js。主要适用于两种场景：电子警察和高点监控。
+一个运行于网页端的车辆检测项目，技术栈为webpack+原生JavaScript+opencv.js。主要适用于两种场景：电子警察和高点监控。
 
 ### 依赖环境搭建与项目部署
 
@@ -26,7 +26,7 @@
   npm install webpack@1.15.0 -g
   ```
   
-- 安装所有项目所需的package，生成node_modules目录:
+- 安装所有项目所需的package，生成`./node_modules`目录:
 
   ```
   npm install
@@ -49,7 +49,7 @@
   Mac系统：
 
   ```
-    npm run dev
+  npm run dev
   ```
 
 - 在`http://localhost:8099/dist/view`中查看应用。可以上传本地任意的车辆视频文件来检测。
